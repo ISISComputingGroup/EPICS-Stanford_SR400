@@ -1,12 +1,15 @@
-#!../../bin/windows-x64/lvdcom
+#!../../bin/windows-x64/Stanford_SR400
+
+## You may have to change Stanford_SR400 to something else
+## everywhere it appears in this file
 
 < envPaths
 
 cd ${TOP}
 
 ## Register all support components
-dbLoadDatabase "dbd/lvDCOM.dbd"
-lvDCOM_registerRecordDeviceDriver pdbbase
+dbLoadDatabase "dbd/Stanford_SR400.dbd"
+Stanford_SR400_registerRecordDeviceDriver pdbbase
 
 cd ${TOP}/iocBoot/${IOC}
 
@@ -22,13 +25,10 @@ cd ${TOP}/iocBoot/${IOC}
 ##    viWarnIfIdle=1, viStartIfIdle=2, viStopOnExitIfStarted=4, viAlwaysStopOnExit=8
 lvDCOMConfigure("ex1", "frontpanel", "$(TOP)/iocBoot/ioclvDCOM/StanfordSR400.xml", "ndxchipir", 6, "", "spudulike", "reliablebeam")
 #lvDCOMConfigure("ex1", "frontpanel", "$(TOP)/iocBoot/ioclvDCOM/StanfordSR400.xml", "", 6)
-#lvDCOMConfigure("frontpanel", "frontpanel", "$(TOP)/iocBoot/ioclvDCOM/StanfordSR400.xml", "", 6)
-#lvDCOMConfigure("ex1", "example", "$(TOP)/lvDCOMApp/src/examples/example_lvinput.xml", "", 6, "LvDCOMex.Application")
-#lvDCOMConfigure("ex1", "example", "$(TOP)/lvDCOMApp/src/examples/example_lvinput.xml", "ndxtestfaa", 6, "", "username", "password")
 
-dbLoadRecords("$(TOP)/db/lvDCOM.db","P=INST:SE:STSR400:")
-#dbLoadRecords("$(ASYN)/db/asynRecord.db","P=ex1:,R=asyn1,PORT=ex1,ADDR=0,OMAX=80,IMAX=80")
+dbLoadRecords("$(TOP)/db/Stanford_SR400.db","P=INST:SE:STSR400:")
 #asynSetTraceMask("frontpanel",0,0xff)
 asynSetTraceIOMask("ex1",0,0x2)
 
 iocInit
+
