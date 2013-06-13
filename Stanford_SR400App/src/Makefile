@@ -14,6 +14,7 @@ DBD += Stanford_SR400.dbd
 
 # Stanford_SR400.dbd will be made up from these files:
 Stanford_SR400_DBD += base.dbd
+Stanford_SR400_DBD += asyn.dbd
 
 # Include dbd files from all support applications:
 #Stanford_SR400_DBD += xxx.dbd
