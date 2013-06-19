@@ -26,7 +26,7 @@ cd ${TOP}/iocBoot/${IOC}
 lvDCOMConfigure("ex1", "frontpanel", "$(TOP)/Stanford_SR400App/protocol/StanfordSR400.xml", "ndxchipir", 6, "", "spudulike", "reliablebeam")
 #lvDCOMConfigure("ex1", "frontpanel", "$(TOP)/Stanford_SR400App/protocol/StanfordSR400.xml", "", 6)
 
-dbLoadRecords("$(TOP)/db/Stanford_SR400.db","P=INST:SE:STSR400:")
+dbLoadRecords("$(TOP)/db/Stanford_SR400.db","P=STSR400:")
 #asynSetTraceMask("frontpanel",0,0xff)
 asynSetTraceIOMask("ex1",0,0x2)
 
