@@ -17,10 +17,10 @@ Stanford_SR400_DBD += base.dbd
 Stanford_SR400_DBD += lvDCOM.dbd
 
 # Include dbd files from all support applications:
-#Stanford_SR400_DBD += xxx.dbd
+Stanford_SR400_DBD += devIocStats.dbd
 
 # Add all the support libraries needed by this IOC
-#Stanford_SR400_LIBS += xxx
+Stanford_SR400_LIBS += devIocStats
 
 # Stanford_SR400_registerRecordDeviceDriver.cpp derives from Stanford_SR400.dbd
 Stanford_SR400_SRCS += Stanford_SR400_registerRecordDeviceDriver.cpp
