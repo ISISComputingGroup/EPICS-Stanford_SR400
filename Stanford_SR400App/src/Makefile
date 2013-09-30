@@ -32,7 +32,7 @@ Stanford_SR400_SRCS_vxWorks += -nil-
 # Add support from base/src/vxWorks if needed
 #Stanford_SR400_OBJS_vxWorks += $(EPICS_BASE_BIN)/vxComLibrary
 
-Stanford_SR400_LIBS +=  lvDCOMSupport asyn autosave
+Stanford_SR400_LIBS +=  lvDCOM asyn autosave
 Stanford_SR400_SYS_LIBS_WIN32 += msxml2
 
 # Finally link to the EPICS Base libraries
